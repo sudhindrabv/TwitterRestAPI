@@ -1,0 +1,90 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+<title>Twitter REST APIr</title>
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<br /> <img id="logo" title="Oracle" alt="Logo" class="logo"
+				style="width: 45px; padding-left: 10px;"
+				th:src="@{/images/logo.png}" /> <span
+				style="font-size: 25px; color: white">Oracle Application
+				Container Cloud Demo</span> <a href="http://twitter.com"> <img
+				id="logo" title="Twitter" alt="Logo" class="logo"
+				style="width: 36px; padding-top: 7px; padding-right: 7px; float: right;"
+				th:src="@{/images/twitter.png}" /></a>
+		</div>
+		<div id="body">
+			<h3>You are now connected to Twitter!</h3>
+			<h4>Twitter Rest API Operations</h4>
+			<p style="padding-left: 30px">
+				Click <a href="/getFriends">here</a> to see your Twitter friends.
+			</p>
+			<p style="padding-left: 30px">
+				Click <a href="/trends">here</a> to see trending hashtags.
+			</p>
+			<div style="padding-left: 10px">
+				<form action="#" th:action="@{/sendTweet?(tweet=${tweet})}"
+					method="post">
+					<table>
+						<tbody>
+							<tr>
+								<td><label for="tweet">Enter your tweet here:</label> <input
+									title="Enter your tweet here:" required="required" type="text"
+									maxlength="160" name="tweet" id="tweet" /></td>
+								<td><input type="submit" value="Tweet" /></td>
+								<td><input type="reset" value="Clear" /></td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+				<form action="#" th:action="@{/search?(hashtag=${hashtag})}"
+					method="get">
+					<table>
+						<tbody>
+							<tr>
+								<td><label for="hashtag">Enter Hashtag to search:</label> <input
+									title="Enter Hashtag to search" required="required" type="text"
+									maxlength="160" name="hashtag" id="hashtag" /></td>
+								<td><input type="submit" value="Search" /></td>
+								<td><input type="reset" value="Clear" /></td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+				<form action="#" th:action="@{/follow?(follow=${follow})}"
+					method="get">
+					<table>
+						<tbody>
+							<tr>
+								<td><label for="follow">Enter username to follow:</label> <input
+									title="Enter username to follow:" required="required"
+									type="text" maxlength="160" name="follow" id="follow" /></td>
+								<td><input type="submit" value="Follow" /></td>
+								<td><input type="reset" value="Clear" /></td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+				<form action="#" th:action="@{/unfollow?(unfollow=${unfollow})}"
+					method="get">
+					<table>
+						<tbody>
+							<tr>
+								<td><label for="unfollow">Enter username to
+										unfollow:</label> <input title="Enter username to unfollow:"
+									required="required" type="text" maxlength="160" name="unfollow"
+									id="unfollow" /></td>
+								<td><input type="submit" value="Unfollow" /></td>
+								<td><input type="reset" value="Clear" /></td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+​
+</html>

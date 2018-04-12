@@ -1,0 +1,43 @@
+#container {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+
+#header {
+	height: 100px;
+	width: 100%;
+	background: #027BC7;
+}
+
+#body {
+	height: 100%;
+	width: 100%;
+	background: white;
+	padding-left: 10px;
+}
+
+body {
+	margin: 0px !important;
+}
+
+input[type=submit], input[type=reset], button {
+	color: white;
+	cursor: pointer;
+	background-color: #027BC7;
+	border: 1px solid black;
+	width:65px;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+td {
+	padding: 0 0 0 15px!important;
+	display: inline-block !important;
+	text-align: left !important;
+}
+
+label {
+	display: inline-block !important;
+	width: 186px !important;
+	margin-left: 5px;
+}
